@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    margin: 2em 5em;
+    width: 800px;
+    height: 500px;
+}
+
+.container h1 {
+    margin-bottom: 0.4em;
+}
+
+.extra {
+    display: none;
+}
+
+p {
+    display: inline;
+    text-align: justify;
+}
+
+input[type="checkbox"] {
+    height: 2em;
+    display: block;
+    appearance: none;
+}
+
+label {
+    position: relative;
+    padding: 1em;
+    background-color:darkblue;
+    color: #fff;
+    cursor: pointer;
+}
+
+label:before {
+    content: "Read More";
+}
+
+input[type="checkbox"]:checked ~ label:before {
+    content: "Read Less";
+}
+
+.dots:has(~ input[type="checkbox"]:checked) {
+    display: none;
+}
+
+.extra:has(~ input[type="checkbox"]:checked) {
+    display: inline;
+}
